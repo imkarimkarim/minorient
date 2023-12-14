@@ -1,0 +1,4 @@
+- [ ] set last generated wallpaper on screen size change
+- [ ] check https://github.com/imkarimkarim/minorient/actions is not running twice...
+- [ ] lil SEO
+- [ ] back on ctrl-z and back button option
