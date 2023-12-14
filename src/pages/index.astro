@@ -5,7 +5,7 @@ import '@fontsource/pacifico';
 ---
 
 <Layout title='minorient | your gradient wallpaper generator'>
-	<main class=''>
+	<main>
 		<img class='fixed' src='' alt='random gradient wallpaper' id='randomWallpaper' />
 		<div class='absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' id='actions'>
 			<h1 id='logo' class='text-white'>minorient</h1>
@@ -19,15 +19,16 @@ import '@fontsource/pacifico';
 				id='download'><i class='gg-software-download'></i><p class='pl-2'>Download</p></button
 			>
 		</div>
-
+	</main>
+	<footer>
 		<em
-			class='flex absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 mix-blend-overlay text-white text-xs'>
-			<span id='screenSize'></span><span class='px-1'>|</span><span
+			class='flex flex-col lg:flex-row text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 mix-blend-overlay text-white text-xs'>
+			<span id='screenSize'></span><span class='px-1 hidden lg:block'>|</span><span
 				>developed with :love: by <a class='hover:underline' href='https://karim.run' target='_blank'> karim</a>
 				 and <a class='hover:underline' href='https://codeium.com' target='_blank'> Codeium</a></span
 			>
 		</em>
-	</main>
+	</footer>
 </Layout>
 
 <script>
@@ -38,7 +39,7 @@ import '@fontsource/pacifico';
 	const h = window.screen.height;
 	const screenSizeEl = document.getElementById('screenSize');
 	if (screenSizeEl) {
-		screenSizeEl.innerText = `your screen size is: ${window.screen.width}x${window.screen.height}`;
+		screenSizeEl.innerText = `your screen size is: ${window.screen.width}x${window.screen.height}.`;
 	}
 
 	const img: any = document.getElementById('randomWallpaper');
