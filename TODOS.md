@@ -5,3 +5,4 @@
 - [ ] pwa(PWABuilder) and share to app stores
 - [ ] generate from image sample input
 - [ ] ask for donate to register minorient.io
+- [ ] add some sort of id mechanism to the end of file name so browsers like chrome won't show download again pop-up 
