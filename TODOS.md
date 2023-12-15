@@ -4,3 +4,4 @@
 - [ ] back on ctrl-z and back button option
 - [ ] pwa(PWABuilder) and share to app stores
 - [ ] generate from image sample input
+- [ ] ask for donate to register minorient.io
