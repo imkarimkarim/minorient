@@ -1,5 +1,6 @@
-- [x] check <https://github.com/imkarimkarim/minorient/actions> is not running twice...
+- [x] ~~check <https://github.com/imkarimkarim/minorient/actions> is not running twice...~~
 - [ ] set last generated wallpaper on screen size change
 - [ ] lil SEO
 - [ ] back on ctrl-z and back button option
 - [ ] pwa(PWABuilder) and share to app stores
+- [ ] generate from image sample input
