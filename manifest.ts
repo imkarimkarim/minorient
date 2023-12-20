@@ -103,42 +103,42 @@ export const manifestObj = {
   categories: ["lifestyle", "personalization", "utilities"],
   screenshots: [
     {
-      src: "/screenshots/Screenshot1.png",
+      src: "/minorient/screenshots/Screenshot1.png",
       sizes: "720x1600",
       type: "image/png",
       form_factor: "wide",
       label: "example of a minorient generated wallpaper",
     },
     {
-      src: "/screenshots/Screenshot2.png",
+      src: "/minorient/screenshots/Screenshot2.png",
       sizes: "720x1600",
       type: "image/png",
       form_factor: "wide",
       label: "example of a minorient generated wallpaper",
     },
     {
-      src: "/screenshots/Screenshot3.png",
+      src: "/minorient/screenshots/Screenshot3.png",
       sizes: "720x1600",
       type: "image/png",
       form_factor: "wide",
       label: "example of a minorient generated wallpaper",
     },
     {
-      src: "/screenshots/Screenshot4.png",
+      src: "/minorient/screenshots/Screenshot4.png",
       sizes: "720x1600",
       type: "image/png",
       form_factor: "wide",
       label: "example of a minorient generated wallpaper",
     },
     {
-      src: "/screenshots/Screenshot5.png",
+      src: "/minorient/screenshots/Screenshot5.png",
       sizes: "720x1600",
       type: "image/png",
       form_factor: "wide",
       label: "example of a minorient generated wallpaper",
     },
     {
-      src: "/screenshots/Screenshot6.png",
+      src: "/minorient/screenshots/Screenshot6.png",
       sizes: "720x1600",
       type: "image/png",
       form_factor: "wide",
@@ -147,131 +147,131 @@ export const manifestObj = {
   ],
   icons: [
     {
-      src: "/icons/android/android-launchericon-512-512.png",
+      src: "/minorient/icons/android/android-launchericon-512-512.png",
       sizes: "512x512",
     },
     {
-      src: "/icons/android/android-launchericon-192-192.png",
+      src: "/minorient/icons/android/android-launchericon-192-192.png",
       sizes: "192x192",
     },
     {
-      src: "/icons/android/android-launchericon-144-144.png",
+      src: "/minorient/icons/android/android-launchericon-144-144.png",
       sizes: "144x144",
     },
     {
-      src: "/icons/android/android-launchericon-96-96.png",
+      src: "/minorient/icons/android/android-launchericon-96-96.png",
       sizes: "96x96",
     },
     {
-      src: "/icons/android/android-launchericon-72-72.png",
+      src: "/minorient/icons/android/android-launchericon-72-72.png",
       sizes: "72x72",
     },
     {
-      src: "/icons/android/android-launchericon-48-48.png",
+      src: "/minorient/icons/android/android-launchericon-48-48.png",
       sizes: "48x48",
     },
     {
-      src: "/icons/ios/16.png",
+      src: "/minorient/icons/ios/16.png",
       sizes: "16x16",
     },
     {
-      src: "/icons/ios/20.png",
+      src: "/minorient/icons/ios/20.png",
       sizes: "20x20",
     },
     {
-      src: "/icons/ios/29.png",
+      src: "/minorient/icons/ios/29.png",
       sizes: "29x29",
     },
     {
-      src: "/icons/ios/32.png",
+      src: "/minorient/icons/ios/32.png",
       sizes: "32x32",
     },
     {
-      src: "/icons/ios/40.png",
+      src: "/minorient/icons/ios/40.png",
       sizes: "40x40",
     },
     {
-      src: "/icons/ios/50.png",
+      src: "/minorient/icons/ios/50.png",
       sizes: "50x50",
     },
     {
-      src: "/icons/ios/57.png",
+      src: "/minorient/icons/ios/57.png",
       sizes: "57x57",
     },
     {
-      src: "/icons/ios/58.png",
+      src: "/minorient/icons/ios/58.png",
       sizes: "58x58",
     },
     {
-      src: "/icons/ios/60.png",
+      src: "/minorient/icons/ios/60.png",
       sizes: "60x60",
     },
     {
-      src: "/icons/ios/64.png",
+      src: "/minorient/icons/ios/64.png",
       sizes: "64x64",
     },
     {
-      src: "/icons/ios/72.png",
+      src: "/minorient/icons/ios/72.png",
       sizes: "72x72",
     },
     {
-      src: "/icons/ios/76.png",
+      src: "/minorient/icons/ios/76.png",
       sizes: "76x76",
     },
     {
-      src: "/icons/ios/80.png",
+      src: "/minorient/icons/ios/80.png",
       sizes: "80x80",
     },
     {
-      src: "/icons/ios/87.png",
+      src: "/minorient/icons/ios/87.png",
       sizes: "87x87",
     },
     {
-      src: "/icons/ios/100.png",
+      src: "/minorient/icons/ios/100.png",
       sizes: "100x100",
     },
     {
-      src: "/icons/ios/114.png",
+      src: "/minorient/icons/ios/114.png",
       sizes: "114x114",
     },
     {
-      src: "/icons/ios/120.png",
+      src: "/minorient/icons/ios/120.png",
       sizes: "120x120",
     },
     {
-      src: "/icons/ios/128.png",
+      src: "/minorient/icons/ios/128.png",
       sizes: "128x128",
     },
     {
-      src: "/icons/ios/144.png",
+      src: "/minorient/icons/ios/144.png",
       sizes: "144x144",
     },
     {
-      src: "/icons/ios/152.png",
+      src: "/minorient/icons/ios/152.png",
       sizes: "152x152",
     },
     {
-      src: "/icons/ios/167.png",
+      src: "/minorient/icons/ios/167.png",
       sizes: "167x167",
     },
     {
-      src: "/icons/ios/180.png",
+      src: "/minorient/icons/ios/180.png",
       sizes: "180x180",
     },
     {
-      src: "/icons/ios/192.png",
+      src: "/minorient/icons/ios/192.png",
       sizes: "192x192",
     },
     {
-      src: "/icons/ios/256.png",
+      src: "/minorient/icons/ios/256.png",
       sizes: "256x256",
     },
     {
-      src: "/icons/ios/512.png",
+      src: "/minorient/icons/ios/512.png",
       sizes: "512x512",
     },
     {
-      src: "/icons/ios/1024.png",
+      src: "/minorient/icons/ios/1024.png",
       sizes: "1024x1024",
     },
   ],
