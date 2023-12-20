@@ -1,12 +1,18 @@
-import { defineConfig } from 'astro/config';
-import AstroPWA from '@vite-pwa/astro'
+import { defineConfig } from "astro/config";
+import AstroPWA from "@vite-pwa/astro";
 import tailwind from "@astrojs/tailwind";
+import { manifestObj } from "./manifest";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), AstroPWA({
-    
-  })],
-  site: 'https://imkarimkarim.github.io',
-  base: '/minorient',
+  integrations: [
+    tailwind(),
+    AstroPWA({
+      manifest: {
+        ...manifestObj,
+      },
+    }),
+  ],
+  site: "https://imkarimkarim.github.io",
+  base: "/minorient",
 });
