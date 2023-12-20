@@ -1,4 +1,5 @@
 ---
+import { pwaInfo } from 'virtual:pwa-info';
 interface Props {
 	title: string;
 }
@@ -16,6 +17,8 @@ import '../styles/global.css';
 		<link rel='icon' type='image/png' href='/minorient/favicon.png' />
 		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
+		<script src='/src/pwa.ts'></script>
+		{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 	</head>
 	<body>
 		<slot />

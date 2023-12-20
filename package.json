@@ -16,5 +16,8 @@
     "astro": "^4.0.5",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@vite-pwa/astro": "^0.2.0"
   }
 }
