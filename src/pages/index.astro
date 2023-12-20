@@ -43,8 +43,10 @@ import '@fontsource/pacifico';
 	}
 
 	const img: any = document.getElementById('randomWallpaper');
+	let randomName = `minorient-${Date.now()}.png`;
 	const setNewWallpaper = () => {
 		if (img) {
+			randomName = `minorient-${Date.now()}.png`;
 			img.src = generateRandomGradientImage(w, h);
 		}
 	};
@@ -57,7 +59,7 @@ import '@fontsource/pacifico';
 
 	const downloadBtn = document.getElementById('download');
 	if (downloadBtn) {
-		downloadBtn.addEventListener('click', () => downloadImage(img, 'minorient.png'));
+		downloadBtn.addEventListener('click', () => downloadImage(img, randomName));
 	}
 </script>
 
