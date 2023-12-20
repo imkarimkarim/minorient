@@ -2,7 +2,8 @@
 - [ ] set last generated wallpaper on screen size change
 - [ ] lil SEO
 - [ ] back on ctrl-z and back button option
-- [ ] pwa(PWABuilder) and share to app stores
+- [x] ~~pwa(PWABuilder)~~
+- [ ] share to app stores + add get on stores image to README
 - [ ] generate from image sample input
 - [ ] ask for donate to register minorient.io
-- [ ] add some sort of id mechanism to the end of file name so browsers like chrome won't show download again pop-up 
+- [x] ~~add some sort of id mechanism to the end of file name so browsers like chrome won't show download again pop-up~~
