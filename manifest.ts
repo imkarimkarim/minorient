@@ -13,7 +13,7 @@ export const manifestObj = {
   description:
     "what's more important than a good wallpaper?\nwe provide beautiful gradient wallpapers for any device.",
   dir: "ltr",
-  orientation: "landscape",
+  orientation: "any",
   related_applications: [
     {
       platform: "play",
