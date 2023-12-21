@@ -1,11 +1,12 @@
 - [x] ~~check <https://github.com/imkarimkarim/minorient/actions> is not running twice...~~
-- [ ] set last generated wallpaper on screen size change
-- [ ] lil SEO
-- [ ] back on ctrl-z and back button option
+- [x] ~~set last generated wallpaper on screen size change~~
+- [x] ~~back on ctrl-z and back button option~~
 - [x] ~~pwa(PWABuilder)~~
-- [x] improve PWA apk
-- [ ] share to app stores + add get on stores image to README
-- [ ] generate from image sample input
-- [ ] ask for donate to register minorient.io
+- [x] ~~improve PWA apk~~
 - [x] ~~add some sort of id mechanism to the end of file name so browsers like chrome won't show download again pop-up~~
+- [ ] share to app stores + add get on stores image to README
+- [ ] ask for donate to register minorient.io
+- [ ] lil SEO
 - [ ] marketing
+- [ ] caching issue(switch to another host?)
+- [ ] android export problems
