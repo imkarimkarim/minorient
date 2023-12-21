@@ -1,13 +1,15 @@
 {
   "name": "minorient",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "setNewVersion": "node setNewVersion.cjs",
+    "prettierNewVersion": "prettier package.json --write"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.2",
@@ -18,6 +20,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@vite-pwa/astro": "^0.2.0"
+    "@vite-pwa/astro": "^0.2.0",
+    "prettier": "^3.1.1"
   }
 }
