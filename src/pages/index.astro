@@ -6,11 +6,23 @@ import "@fontsource/pacifico";
 
 <Layout title="minorient | beautiful gradient wallpapers for any device">
   <main>
+    <div
+      id="goBack"
+      class="absolute z-50 w-1/3 h-full justify-center items-center mix-blend-overlay opacity-20 pr-12 cursor-pointer hover:opacity-80 text-white"
+    >
+      <i class="gg-chevron-left"></i>
+    </div>
+    <div
+      id="goForward"
+      class="absolute z-50 w-1/3 right-0 h-full justify-center items-center mix-blend-overlay opacity-20 pl-12 cursor-pointer hover:opacity-80 text-white"
+    >
+      <i class="gg-chevron-right"></i>
+    </div>
     <img
-      class="fixed"
+      class="fixed w-full h-full"
       src=""
       alt="random gradient wallpaper"
-      id="randomWallpaper"
+      id="img"
     />
     <div
       class="absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -36,8 +48,7 @@ import "@fontsource/pacifico";
     <em
       class="flex flex-col lg:flex-row text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 mix-blend-overlay text-white text-xs"
     >
-      <span id="screenSize"></span><span class="px-1 hidden lg:block">|</span
-      ><span
+      <span
         >developed with :love: by <a
           class="hover:underline"
           href="https://karim.run"
@@ -51,8 +62,9 @@ import "@fontsource/pacifico";
           target="_blank"
         >
           Codeium</a
-        ></span
-      >
+        >
+        <span> - since 2023</span>
+      </span>
     </em>
   </footer>
 </Layout>
@@ -63,29 +75,107 @@ import "@fontsource/pacifico";
 
   const w = window.screen.width;
   const h = window.screen.height;
-  const screenSizeEl = document.getElementById("screenSize");
-  if (screenSizeEl) {
-    screenSizeEl.innerText = `your screen size is: ${window.screen.width}x${window.screen.height}.`;
-  }
+  let fileName: string;
+  let history: any = [];
+  let currentWallpapaer = 0;
 
-  const img: any = document.getElementById("randomWallpaper");
-  let randomName = `minorient-${Date.now()}.png`;
-  const setNewWallpaper = () => {
-    if (img) {
-      randomName = `minorient-${Date.now()}.png`;
-      img.src = generateRandomGradientImage(w, h);
-    }
-  };
-  setNewWallpaper();
+  const img: HTMLImageElement = document.getElementById(
+    "img",
+  ) as HTMLImageElement;
 
   const generateBtn = document.getElementById("generate");
-  if (generateBtn) {
-    generateBtn.addEventListener("click", () => setNewWallpaper());
-  }
-
   const downloadBtn = document.getElementById("download");
-  if (downloadBtn) {
-    downloadBtn.addEventListener("click", () => downloadImage(img, randomName));
+  const goBackBtn = document?.getElementById("goBack");
+  const goForwardBtn = document?.getElementById("goForward");
+
+  const setNewWallpaper = () => {
+    if (img) {
+      fileName = `minorient-${Date.now()}.png`;
+      const tmp = generateRandomGradientImage(w, h);
+      img.src = tmp;
+      history.push({
+        img: tmp,
+        fileName: fileName,
+      });
+      currentWallpapaer = history.length - 1;
+      handleShowGoBackGoForwardButton();
+    }
+  };
+
+  const goBack = () => {
+    if (currentWallpapaer > 0) {
+      currentWallpapaer--;
+      img.src = history[currentWallpapaer].img;
+      handleShowGoBackGoForwardButton();
+    }
+  };
+
+  const goForward = () => {
+    if (currentWallpapaer < history.length - 1) {
+      currentWallpapaer++;
+      img.src = history[currentWallpapaer].img;
+      handleShowGoBackGoForwardButton();
+    }
+  };
+
+  const handleShowGoBackGoForwardButton = () => {
+    if (goBackBtn) {
+      if (currentWallpapaer > 0) {
+        goBackBtn.style.display = "flex";
+      } else {
+        goBackBtn.style.display = "none";
+      }
+    }
+
+    if (goForwardBtn) {
+      if (currentWallpapaer < history.length - 1) {
+        goForwardBtn.style.display = "flex";
+      } else {
+        goForwardBtn.style.display = "none";
+      }
+    }
+  };
+
+  setNewWallpaper(); // initial wallpaper
+
+  // actions
+  generateBtn?.addEventListener("click", () => setNewWallpaper());
+  downloadBtn?.addEventListener("click", () =>
+    downloadImage(img, history[currentWallpapaer].fileName),
+  );
+
+  goBackBtn?.addEventListener("click", () => goBack());
+  goForwardBtn?.addEventListener("click", () => goForward());
+
+  // shortcuts
+  window.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.key === "z") {
+      goBack();
+    }
+    if (e.ctrlKey && e.key === "y") {
+      goForward();
+    }
+    const space = " ";
+    if (e.key === "Enter" || e.key === space) {
+      setNewWallpaper();
+    }
+  });
+
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  document.addEventListener("touchstart", (e) => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+
+  document.addEventListener("touchend", (e) => {
+    touchendX = e.changedTouches[0].screenX;
+    checkDirection();
+  });
+
+  function checkDirection() {
+    if (touchendX > touchstartX) goBack(); // swirped right
+    if (touchendX < touchstartX) goForward(); // swiped left
   }
 </script>
 
