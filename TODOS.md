@@ -11,3 +11,4 @@
 - [ ] caching issue(switch to another host?)
 - [ ] android export problems
 - [ ] scale icon size
+- [ ] disable text selecting and image drag/drop like jajiga
