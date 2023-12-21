@@ -1,7 +1,9 @@
+import packageJson from "./package.json";
+
 export const manifestObj = {
   name: "minorient",
   short_name: "minorient",
-  start_url: "/minorient/",
+  start_url: "/minorient/?v=" + packageJson.version,
   display: "standalone",
   background_color: "#ffffff",
   lang: "en",
@@ -9,15 +11,9 @@ export const manifestObj = {
   theme_color: "#000000",
   id: "minorient",
   description:
-    "what's more important than a good wallpaper?\nbeautiful gradient wallpapers for any device.",
+    "what's more important than a good wallpaper?\nwe provide beautiful gradient wallpapers for any device.",
   dir: "ltr",
   orientation: "landscape",
-  display_override: [
-    "standalone",
-    "window-controls-overlay",
-    "browser",
-    "minimal-ui",
-  ],
   related_applications: [
     {
       platform: "play",

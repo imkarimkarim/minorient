@@ -3,7 +3,9 @@
 - [ ] lil SEO
 - [ ] back on ctrl-z and back button option
 - [x] ~~pwa(PWABuilder)~~
+- [x] improve PWA apk
 - [ ] share to app stores + add get on stores image to README
 - [ ] generate from image sample input
 - [ ] ask for donate to register minorient.io
 - [x] ~~add some sort of id mechanism to the end of file name so browsers like chrome won't show download again pop-up~~
+- [ ] marketing
