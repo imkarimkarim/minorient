@@ -10,3 +10,4 @@
 - [ ] marketing
 - [ ] caching issue(switch to another host?)
 - [ ] android export problems
+- [ ] scale icon size

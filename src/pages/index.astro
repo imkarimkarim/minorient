@@ -63,7 +63,6 @@ import "@fontsource/pacifico";
         >
           Codeium</a
         >
-        <span> - since 2023</span>
       </span>
     </em>
   </footer>
@@ -149,10 +148,10 @@ import "@fontsource/pacifico";
 
   // shortcuts
   window.addEventListener("keydown", (e) => {
-    if (e.ctrlKey && e.key === "z") {
+    if (e.key === "ArrowLeft" || (e.ctrlKey && e.key === "z")) {
       goBack();
     }
-    if (e.ctrlKey && e.key === "y") {
+    if (e.key === "ArrowRight" || (e.ctrlKey && e.key === "y")) {
       goForward();
     }
     const space = " ";
