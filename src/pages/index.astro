@@ -1,66 +1,92 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/icons.css';
-import '@fontsource/pacifico';
+import Layout from "../layouts/Layout.astro";
+import "../styles/icons.css";
+import "@fontsource/pacifico";
 ---
 
-<Layout title='minorient | beautiful gradient wallpapers for any device'>
-	<main>
-		<img class='fixed' src='' alt='random gradient wallpaper' id='randomWallpaper' />
-		<div class='absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' id='actions'>
-			<h1 id='logo' class='text-white'>minorient</h1>
-			<button
-				class='flex items-center m-5 rounded border border-white px-12 py-3 text-sm font-medium text-white opacity-50 hover:opacity-100 mix-blend-overlay'
-				id='generate'><p class='pr-2'>Generate</p><i class='gg-sync'></i></button
-			>
-			<!-- TODO back button -->
-			<button
-				class='flex items-center m-5 rounded border border-white px-12 py-3 text-sm font-medium text-white opacity-50 hover:opacity-100 mix-blend-overlay'
-				id='download'><i class='gg-software-download'></i><p class='pl-2'>Download</p></button
-			>
-		</div>
-	</main>
-	<footer>
-		<em
-			class='flex flex-col lg:flex-row text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 mix-blend-overlay text-white text-xs'>
-			<span id='screenSize'></span><span class='px-1 hidden lg:block'>|</span><span
-				>developed with :love: by <a class='hover:underline' href='https://karim.run' target='_blank'> karim</a>
-				 and <a class='hover:underline' href='https://codeium.com' target='_blank'> Codeium</a></span
-			>
-		</em>
-	</footer>
+<Layout title="minorient | beautiful gradient wallpapers for any device">
+  <main>
+    <img
+      class="fixed"
+      src=""
+      alt="random gradient wallpaper"
+      id="randomWallpaper"
+    />
+    <div
+      class="absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      id="actions"
+    >
+      <h1 id="logo" class="text-white">minorient</h1>
+      <button
+        class="flex items-center m-5 rounded border border-white px-12 py-3 text-sm font-medium text-white opacity-50 hover:opacity-100 mix-blend-overlay"
+        id="generate"
+        ><p class="pr-2">Generate</p><i class="gg-sync"></i></button
+      >
+      <!-- TODO back button -->
+      <button
+        class="flex items-center m-5 rounded border border-white px-12 py-3 text-sm font-medium text-white opacity-50 hover:opacity-100 mix-blend-overlay"
+        id="download"
+        ><i class="gg-software-download"></i><p class="pl-2">
+          Download
+        </p></button
+      >
+    </div>
+  </main>
+  <footer>
+    <em
+      class="flex flex-col lg:flex-row text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 mix-blend-overlay text-white text-xs"
+    >
+      <span id="screenSize"></span><span class="px-1 hidden lg:block">|</span
+      ><span
+        >developed with :love: by <a
+          class="hover:underline"
+          href="https://karim.run"
+          target="_blank"
+        >
+          karim</a
+        >
+         and <a
+          class="hover:underline"
+          href="https://codeium.com"
+          target="_blank"
+        >
+          Codeium</a
+        ></span
+      >
+    </em>
+  </footer>
 </Layout>
 
 <script>
-	import { generateRandomGradientImage } from '../funcs/generateRandomGradientImage.ts';
-	import { downloadImage } from '../funcs/downloadImage.ts';
+  import { generateRandomGradientImage } from "../funcs/generateRandomGradientImage.ts";
+  import { downloadImage } from "../funcs/downloadImage.ts";
 
-	const w = window.screen.width;
-	const h = window.screen.height;
-	const screenSizeEl = document.getElementById('screenSize');
-	if (screenSizeEl) {
-		screenSizeEl.innerText = `your screen size is: ${window.screen.width}x${window.screen.height}.`;
-	}
+  const w = window.screen.width;
+  const h = window.screen.height;
+  const screenSizeEl = document.getElementById("screenSize");
+  if (screenSizeEl) {
+    screenSizeEl.innerText = `your screen size is: ${window.screen.width}x${window.screen.height}.`;
+  }
 
-	const img: any = document.getElementById('randomWallpaper');
-	let randomName = `minorient-${Date.now()}.png`;
-	const setNewWallpaper = () => {
-		if (img) {
-			randomName = `minorient-${Date.now()}.png`;
-			img.src = generateRandomGradientImage(w, h);
-		}
-	};
-	setNewWallpaper();
+  const img: any = document.getElementById("randomWallpaper");
+  let randomName = `minorient-${Date.now()}.png`;
+  const setNewWallpaper = () => {
+    if (img) {
+      randomName = `minorient-${Date.now()}.png`;
+      img.src = generateRandomGradientImage(w, h);
+    }
+  };
+  setNewWallpaper();
 
-	const generateBtn = document.getElementById('generate');
-	if (generateBtn) {
-		generateBtn.addEventListener('click', () => setNewWallpaper());
-	}
+  const generateBtn = document.getElementById("generate");
+  if (generateBtn) {
+    generateBtn.addEventListener("click", () => setNewWallpaper());
+  }
 
-	const downloadBtn = document.getElementById('download');
-	if (downloadBtn) {
-		downloadBtn.addEventListener('click', () => downloadImage(img, randomName));
-	}
+  const downloadBtn = document.getElementById("download");
+  if (downloadBtn) {
+    downloadBtn.addEventListener("click", () => downloadImage(img, randomName));
+  }
 </script>
 
 <style></style>

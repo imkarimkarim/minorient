@@ -1,26 +1,29 @@
 ---
-import { pwaInfo } from 'virtual:pwa-info';
+import { pwaInfo } from "virtual:pwa-info";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='description' content="what's more important than a good wallpaper?" />
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/png' href='/minorient/favicon.png' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{title}</title>
-		<script src='/src/pwa.ts'></script>
-		{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="what's more important than a good wallpaper?"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/minorient/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script src="/src/pwa.ts"></script>
+    {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
